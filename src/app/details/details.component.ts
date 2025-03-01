@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from "@angular/router";
 import { HousingService } from "../housing.service";
 import { HousingLocation } from "../housing-location/housing-location";
+import { Translations } from "../utils/translations";
 
 @Component({
   selector: 'app-details',
@@ -14,20 +15,21 @@ import { HousingLocation } from "../housing-location/housing-location";
      
       <section class="listing-description">
         <h2 class="listing-heading">{{ housingLocation?.name }}</h2>
-        <p class="listing-location">{{ housingLocation?.city}}, {{ housingLocation?.state }}</p>
+        <p class="listing-location">{{housingLocation?.city}}, {{ housingLocation?.state }} {{ Translations.translateAreaCode(housingLocation?.city + ', ' + housingLocation?.state)}}</p>
       </section>
       
       <section class="listing-features">
         <h2 class="section-heading">About this housing location</h2>
         <ul>
           <li>Units available: {{ housingLocation?.availableUnits }}</li>
-          <li>Does this location have wifi: {{ housingLocation?.wifi }}</li>
-          <li>Does this location have laundry: {{ housingLocation?.laundry }}</li>
+          <li>Does this location have wifi: {{ Translations.translateBooleans(housingLocation?.wifi) }}</li>
+          <li>Does this location have laundry: {{ Translations.translateBooleans(housingLocation?.laundry) }}</li>
         </ul>
+        <p class="pricing">Price: {{ Translations.translateAndFormatPrice(housingLocation?.price) }} $</p>
       </section>
       
       <section class="listing-apply">
-        <h2 class="section-heading">Apply to live here</h2>
+        <h2 class="section-heading">For information and appointments please contact us.</h2>
         <button class="primary" type="button" (click)="showApplyNow()">Apply now</button>
       </section>
     
@@ -48,4 +50,6 @@ export class DetailsComponent {
   showApplyNow() {
     alert('Apply Mamaaaaa');
   }
+
+  protected readonly Translations = Translations;
 }

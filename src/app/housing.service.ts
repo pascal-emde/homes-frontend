@@ -14,7 +14,8 @@ export class HousingService {
       photo: '/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg',
       availableUnits: 4,
       wifi: true,
-      laundry: true
+      laundry: true,
+      price: 1280000
     },
     {
       id: 1,
@@ -24,7 +25,8 @@ export class HousingService {
       photo: '/assets/brandon-griggs-wR11KBaB86U-unsplash.jpg',
       availableUnits: 0,
       wifi: false,
-      laundry: true
+      laundry: true,
+      price: 360000
     },
     {
       id: 2,
@@ -34,7 +36,8 @@ export class HousingService {
       photo: '/assets/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg',
       availableUnits: 1,
       wifi: false,
-      laundry: false
+      laundry: false,
+      price: 680000
     },
     {
       id: 3,
@@ -44,7 +47,8 @@ export class HousingService {
       photo: '/assets/ian-macdonald-W8z6aiwfi1E-unsplash.jpg',
       availableUnits: 1,
       wifi: true,
-      laundry: false
+      laundry: false,
+      price: 320000
     },
     {
       id: 4,
@@ -54,7 +58,8 @@ export class HousingService {
       photo: '/assets/krzysztof-hepner-978RAXoXnH4-unsplash.jpg',
       availableUnits: 1,
       wifi: true,
-      laundry: false
+      laundry: false,
+      price: 728000
     },
     {
       id: 5,
@@ -64,7 +69,8 @@ export class HousingService {
       photo: '/assets/r-architecture-JvQ0Q5IkeMM-unsplash.jpg',
       availableUnits: 2,
       wifi: true,
-      laundry: true
+      laundry: true,
+      price: 340000
     },
     {
       id: 6,
@@ -74,7 +80,8 @@ export class HousingService {
       photo: '/assets/phil-hearing-IYfp2Ixe9nM-unsplash.jpg',
       availableUnits: 5,
       wifi: true,
-      laundry: true
+      laundry: true,
+      price: 368000
     },
     {
       id: 7,
@@ -84,7 +91,8 @@ export class HousingService {
       photo: '/assets/r-architecture-GGupkreKwxA-unsplash.jpg',
       availableUnits: 2,
       wifi: true,
-      laundry: true
+      laundry: true,
+      price: 268400
     },
     {
       id: 8,
@@ -94,7 +102,8 @@ export class HousingService {
       photo: '/assets/saru-robert-9rP3mxf8qWI-unsplash.jpg',
       availableUnits: 10,
       wifi: false,
-      laundry: false
+      laundry: false,
+      price: 540800
     },
     {
       id: 9,
@@ -104,7 +113,8 @@ export class HousingService {
       photo: '/assets/webaliser-_TPTXZd9mOo-unsplash.jpg',
       availableUnits: 6,
       wifi: true,
-      laundry: true
+      laundry: true,
+      price: 655000
     }
   ];
 

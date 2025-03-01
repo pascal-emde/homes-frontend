@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from "./home/home.component";
 import { RouterModule } from "@angular/router";
 
 @Component({
@@ -17,7 +16,6 @@ import { RouterModule } from "@angular/router";
   `,
   styleUrls: ['./app.component.css'],
   imports: [
-      HomeComponent,
       RouterModule
   ]
 })
