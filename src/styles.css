@@ -21,4 +21,9 @@ button.primary {
     background: var(--primary-color);
     color: white;
     border-radius: 8px;
+
+    &:hover {
+        cursor: pointer;
+        background: #8B89E6;
+    }
 }
