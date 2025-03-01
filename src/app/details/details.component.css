@@ -6,12 +6,17 @@
     grid-column: 1;
 }
 
+.detail-wrapper {
+    width: 420px;
+}
+
 .listing-photo {
     height: 420px;
     width: 50%;
     object-fit: cover;
     border-radius: 30px;
     float: right;
+    margin-bottom: 16px;
 }
 
 .listing-description {
@@ -19,7 +24,7 @@
 }
 
 .listing-heading {
-    font-size: 48pt;
+    font-size: 24pt;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -29,14 +34,21 @@
 }
 
 .listing-location {
-    font-size: 24pt;
+    font-size: 12pt;
     margin-bottom: 15px;
+
+    &:hover {
+        color: var(--secondary-color);
+        cursor: pointer;
+        text-decoration-line: underline;
+
+    }
 }
 
 .listing-features > .section-heading {
     color: var(--primary-color);
-    font-size: 24pt;
-    margin-bottom: 15px;
+    font-size: 16pt;
+    margin-bottom: 8px;
 }
 
 .listing-features {
@@ -44,7 +56,7 @@
 }
 
 .listing-features li {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 li {
@@ -52,14 +64,16 @@ li {
 }
 
 .listing-apply .section-heading {
-    font-size: 18pt;
-    margin-bottom: 15px;
+    font-size: 12pt;
+    margin-bottom: 16px;
 }
 
 .pricing {
-    font-size: 24px;
+    font-size: 18px;
     color: var(--primary-color);
+    background-color: var(--accent-color);
     font-weight: bold;
+    margin-top: 20px;
 }
 
 label, input {
@@ -69,7 +83,7 @@ label {
     color: var(--primary-color);
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 12pt;
+    font-size: 8pt;
 }
 input {
     font-size: 16pt;

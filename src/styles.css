@@ -6,24 +6,30 @@
 }
 
 body {
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Bahnschrift', serif;
 }
 :root {
     --primary-color: rgba(6, 77, 126, 0.44);
     --secondary-color: #3687a9;
-    --accent-color: #e8e7fa;
+    --accent-color: rgba(6, 77, 126, 0.1);
     --shadow-color: #E8E8E8;
 }
 
 button.primary {
     padding: 10px;
-    border: solid 1px var(--secondary-color);
-    background: var(--primary-color);
+    border: solid 1px var(--accent-color);
+    background: var(--secondary-color);
     color: white;
     border-radius: 8px;
+    font-size: 12px;
 
     &:hover {
         cursor: pointer;
+        background: var(--primary-color);
+    }
+
+    &:active {
+        border: solid 1px var(--accent-color);
         background: var(--secondary-color);
     }
 }

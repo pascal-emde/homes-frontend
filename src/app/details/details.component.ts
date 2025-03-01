@@ -13,25 +13,27 @@ import { Translations } from "../utils/translations";
     <article class="detail">
       <img class="listing-photo" [src]="housingLocation?.photo">
      
-      <section class="listing-description">
-        <h2 class="listing-heading">{{ housingLocation?.name }}</h2>
-        <p class="listing-location">{{housingLocation?.city}}, {{ housingLocation?.state }} {{ Translations.translateAreaCode(housingLocation?.city + ', ' + housingLocation?.state)}}</p>
-      </section>
-      
-      <section class="listing-features">
-        <h2 class="section-heading">About this housing location</h2>
-        <ul>
-          <li>Units available: {{ housingLocation?.availableUnits }}</li>
-          <li>Does this location have wifi: {{ Translations.translateBooleans(housingLocation?.wifi) }}</li>
-          <li>Does this location have laundry: {{ Translations.translateBooleans(housingLocation?.laundry) }}</li>
-        </ul>
-        <p class="pricing">Price: {{ Translations.translateAndFormatPrice(housingLocation?.price) }} $</p>
-      </section>
-      
-      <section class="listing-apply">
-        <h2 class="section-heading">For information and appointments please contact us.</h2>
-        <button class="primary" type="button" (click)="showApplyNow()">Apply now</button>
-      </section>
+      <div class="detail-wrapper">
+        <section class="listing-description">
+          <h2 class="listing-heading">{{ housingLocation?.name }}</h2>
+          <p class="listing-location">{{housingLocation?.city}}, {{ housingLocation?.state }} {{ Translations.translateAreaCode(housingLocation?.city + ', ' + housingLocation?.state)}}</p>
+        </section>
+        
+        <section class="listing-features">
+          <h2 class="section-heading">About this housing location</h2>
+          <ul>
+            <li>Units available: {{ housingLocation?.availableUnits }}</li>
+            <li>Does this location have wifi: {{ Translations.translateBooleans(housingLocation?.wifi) }}</li>
+            <li>Does this location have laundry: {{ Translations.translateBooleans(housingLocation?.laundry) }}</li>
+          </ul>
+          <p class="pricing">Price: {{ Translations.translateAndFormatPrice(housingLocation?.price) }} $</p>
+        </section>
+        
+        <section class="listing-apply">
+          <h2 class="section-heading">For information and appointments please contact us.</h2>
+          <button class="primary" type="button" (click)="showApplyNow()">Apply now</button>
+        </section>
+      </div>
     
     </article>
   `,
