@@ -28,7 +28,7 @@ import { HousingLocation } from "../housing-location/housing-location";
       
       <section class="listing-apply">
         <h2 class="section-heading">Apply to live here</h2>
-        <button class="primary" type="button">Apply now</button>
+        <button class="primary" type="button" (click)="showApplyNow()">Apply now</button>
       </section>
     
     </article>
@@ -43,5 +43,9 @@ export class DetailsComponent {
   constructor() {
     const housingLocationId = Number(this.route.snapshot.params['id']);
     this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
+  }
+
+  showApplyNow() {
+    alert('Apply Mamaaaaa');
   }
 }
