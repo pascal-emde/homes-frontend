@@ -18,3 +18,7 @@
 - Run the application 
 
   `ng serve`
+
+- Start local json server
+
+  `json-server --watch db.json`

@@ -9,7 +9,7 @@ export class Translations {
     }
 
     static translateAreaCode(state?: string): string {
-        return state ? Translations.AreaCodes[state] ?? 'Area not found' : 'State not provided';
+        return state? Translations.AreaCodes[state] ?? 'Area not found' : 'State not provided';
     }
 
     static AreaCodes: Record<string, string> = {
