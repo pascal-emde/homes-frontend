@@ -70,10 +70,11 @@ li {
 
 .pricing {
     font-size: 18px;
-    color: var(--primary-color);
-    background-color: var(--accent-color);
+    color: white;
+    background-color: var(--primary-color);
     font-weight: bold;
     margin-top: 20px;
+    padding: 10px 10px 0 10px;
 }
 
 label, input {
@@ -87,6 +88,7 @@ label {
 }
 input {
     font-size: 16pt;
+    background-color: var(--accent-color);
     margin-bottom: 15px;
     padding: 10px;
     width: 400px;

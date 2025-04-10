@@ -1,0 +1,62 @@
+.new-home-wrapper {
+
+}
+
+.new-home-form {
+    font-family: Bahnschrift, serif;
+    display: grid;
+    grid-column: 1;
+    justify-content: center;
+}
+
+.listing-apply .section-heading {
+    font-size: 12pt;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 24pt;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 12pt;
+    margin-bottom: 15px;
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 8pt;
+}
+
+input {
+    font-size: 16pt;
+    background-color: var(--accent-color);
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 400px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid .3px;
+}
+
+button {
+    width: 80px;
+}
+
+.buttons-vertical {
+    display: flex;
+    justify-content: space-between;
+}
+
+

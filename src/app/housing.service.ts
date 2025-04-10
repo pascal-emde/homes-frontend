@@ -46,7 +46,7 @@ export class HousingService {
         price: price
       };
 
-      // Add Home to JSON-DB
+      //TODO Add Home to JSON-DB
     console.log(JSON.stringify(newHome))
     });
   }

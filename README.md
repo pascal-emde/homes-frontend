@@ -30,3 +30,7 @@
   `ng generate component "component-name" --standalone --inline-template`
 
   `// ng g c "component-name" --standalone --inline-template`
+
+- Import Angular Material
+
+  `ng add @angular/material`
