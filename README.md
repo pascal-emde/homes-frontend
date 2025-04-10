@@ -22,3 +22,11 @@
 - Start local json server
 
   `json-server --watch db.json`
+
+- Add a Angular component
+
+  `cd ./src/app`
+ 
+  `ng generate component "component-name" --standalone --inline-template`
+
+  `// ng g c "component-name" --standalone --inline-template`
