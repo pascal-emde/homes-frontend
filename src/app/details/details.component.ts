@@ -42,7 +42,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 
             <label for="email">Email</label>
             <input id="email" type="email" formControlName="email">
-            <button type="submit" class="primary">Apply now</button>
+            <button class="primary" type="submit">Apply now</button>
           </form>
         </section>
       </div>
@@ -70,9 +70,9 @@ export class DetailsComponent {
 
   applyNow() {
     this.housingService.submitApplication(
-        this.applyForm.value.firstName ?? '',
-        this.applyForm.value.lastName ?? '',
-        this.applyForm.value.email ?? ''
+        this.applyForm.value.firstName || 'firstName empty',
+        this.applyForm.value.lastName || 'lastName empty',
+        this.applyForm.value.email || 'E-Mail empty'
     );
   }
 

@@ -9,16 +9,19 @@ import { HousingService } from "../housing.service";
   standalone: true,
   imports: [CommonModule, HousingLocationComponent],
   template: `
-    <section>
-      <form>
-        <input type="text" placeholder="Filter by city" #filter>
-        <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
-      </form>
-    </section>
-    
-    <section class="results">
-      <app-housing-location *ngFor="let housingLocation of filteredHousingLocationList" [housingLocation]="housingLocation"></app-housing-location>
-    </section>
+      <section>
+          <form>
+              <input type="text" placeholder="Filter by city" #filter>
+              <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+              <button class="primary" type="button" (click)="callApi()">API Call</button>
+              <button class="primary" type="button" (click)="addNewHome()">Add New Home</button>
+          </form>
+      </section>
+
+      <section class="results">
+          <app-housing-location *ngFor="let housingLocation of filteredHousingLocationList"
+                                [housingLocation]="housingLocation"></app-housing-location>
+      </section>
   `,
   styleUrls: ['./home.component.css']
 })
@@ -41,4 +44,14 @@ export class HomeComponent {
         housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
     );
    }
+
+    callApi() {
+        this.housingService.callApi().then((response) => {
+            console.log(`API call from backend: \n ${JSON.stringify(response)}`)
+        });
+    }
+
+    addNewHome() {
+      this.housingService.addNewHome("New Home", "Arschhausen", "Derpistan", "Photo String", 69, true, true, 500000);
+    }
 }
