@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
-import { MatDialogModule } from "@angular/material/dialog";
+import { MatDialogModule, MatDialogRef } from "@angular/material/dialog";
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { DIALOG_DATA } from "@angular/cdk/dialog";
 
@@ -57,6 +57,8 @@ import { DIALOG_DATA } from "@angular/cdk/dialog";
 })
 export class NewHomeFormComponent {
   data = inject(DIALOG_DATA);
+  dialogRef = inject(MatDialogRef<NewHomeFormComponent>)
+
   applyForm = new FormGroup({
     name: new FormControl(''),
     city: new FormControl(''),
@@ -69,6 +71,6 @@ export class NewHomeFormComponent {
   });
 
     closeNewHomeForm(): void {
-
+      this.dialogRef.close();
   };
 }

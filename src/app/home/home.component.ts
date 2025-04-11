@@ -56,8 +56,7 @@ export class HomeComponent {
     }
 
     openNewHomeForm(): void {
-      //this.dialog.open(NewHomeFormComponent);
-       const dialogRef = this.dialog.open(NewHomeFormComponent, {
+       this.dialog.open(NewHomeFormComponent, {
             width: '600px',
             height: '900px',
             hasBackdrop: true,
@@ -67,11 +66,6 @@ export class HomeComponent {
             }
         });
     }
-
-      //TODO close new-home-form and cancel adding
-    closeNewHomeForm(): void {
-        this.dialog.closeAll();
-  }
 
     addNewHome() {
       this.housingService.addNewHome("New Home", "Arschhausen", "Derpistan", "Photo String", 69, true, true, 500000);
