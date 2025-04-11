@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
-import { MatDialogModule} from "@angular/material/dialog";
+import { MatDialogModule } from "@angular/material/dialog";
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import { DIALOG_DATA } from "@angular/cdk/dialog";
 
 
 @Component({
@@ -14,7 +15,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
     <div class="new-home-wrapper">
       <article class="new-home-form">
         <section class="listing-apply">
-            <h1>New Home</h1>
+            <h1 class="new-home-header">New Home</h1>
             <p>Edit form to add a new home.</p>
             
             <!-- FORM GROUP -->
@@ -45,7 +46,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
   
               <div class="buttons-vertical">
                 <button class="primary" type="submit">OK</button>
-                <button class="primary" type="cancel">Cancel</button>
+                <button class="primary" type="cancel" (click)="closeNewHomeForm()">Cancel</button>
               </div>
             </form>
         </section>
@@ -55,6 +56,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
   styleUrls: ['./new-home-form.component.css']
 })
 export class NewHomeFormComponent {
+  data = inject(DIALOG_DATA);
   applyForm = new FormGroup({
     name: new FormControl(''),
     city: new FormControl(''),
@@ -65,4 +67,8 @@ export class NewHomeFormComponent {
     laundry: new FormControl(''),
     price: new FormControl('')
   });
+
+    closeNewHomeForm(): void {
+
+  };
 }

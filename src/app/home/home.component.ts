@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from "../housing-location/housing-location.component";
 import { HousingLocation } from "../housing-location/housing-location";
 import { HousingService } from "../housing.service";
+import { MatButtonModule } from "@angular/material/button";
 import { NewHomeFormComponent } from "../new-home-form/new-home-form.component";
 import { MatDialog, MatDialogModule } from "@angular/material/dialog";
 
@@ -10,7 +11,7 @@ import { MatDialog, MatDialogModule } from "@angular/material/dialog";
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HousingLocationComponent, MatDialogModule],
+    imports: [CommonModule, HousingLocationComponent, MatButtonModule, MatDialogModule],
   template: `
       <section>
           <form>
@@ -22,19 +23,18 @@ import { MatDialog, MatDialogModule } from "@angular/material/dialog";
       </section>
 
       <section class="results">
-          <app-housing-location *ngFor="let housingLocation of filteredHousingLocationList"
-                                [housingLocation]="housingLocation"></app-housing-location>
+          <app-housing-location *ngFor="let housingLocation of filteredHousingLocationList" [housingLocation]="housingLocation"></app-housing-location>
       </section>
   `,
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+    housingLocationList: HousingLocation[] = [];
+    housingService: HousingService = inject(HousingService);
+    filteredHousingLocationList: HousingLocation[] = [];
+    readonly dialog = inject(MatDialog);
 
-  housingLocationList: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);
-  filteredHousingLocationList: HousingLocation[] = [];
-
-  constructor(private readonly dialog: MatDialog) {
+  constructor() {
     this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
       this.housingLocationList = housingLocationList;
       this.filteredHousingLocationList = housingLocationList;
@@ -55,12 +55,11 @@ export class HomeComponent {
         });
     }
 
-    //TODO open new-home-form
     openNewHomeForm(): void {
-        //this.dialog.open(NewHomeFormComponent);
-        const dialogRef = this.dialog.open(NewHomeFormComponent, {
+      //this.dialog.open(NewHomeFormComponent);
+       const dialogRef = this.dialog.open(NewHomeFormComponent, {
             width: '600px',
-            height: '800px',
+            height: '900px',
             hasBackdrop: true,
             disableClose: true,
             autoFocus: true,
@@ -71,9 +70,11 @@ export class HomeComponent {
 
       //TODO close new-home-form and cancel adding
     closeNewHomeForm(): void {
-    }
+        this.dialog.closeAll();
+  }
 
     addNewHome() {
       this.housingService.addNewHome("New Home", "Arschhausen", "Derpistan", "Photo String", 69, true, true, 500000);
     }
 }
+

@@ -1,12 +1,13 @@
-.new-home-wrapper {
-
-}
-
 .new-home-form {
     font-family: Bahnschrift, serif;
     display: grid;
     grid-column: 1;
     justify-content: center;
+}
+
+.new-home-header {
+    background-color: var(--accent-color);
+    padding: 10px 10px 10px 10px;
 }
 
 .listing-apply .section-heading {
