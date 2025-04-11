@@ -7,7 +7,6 @@ import { MatButtonModule } from "@angular/material/button";
 import { NewHomeFormComponent } from "../new-home-form/new-home-form.component";
 import { MatDialog, MatDialogModule } from "@angular/material/dialog";
 
-
 @Component({
   selector: 'app-home',
   standalone: true,

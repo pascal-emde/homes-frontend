@@ -21,6 +21,14 @@ select {
     --secondary-color: #3687a9;
     --accent-color: rgba(6, 77, 126, 0.1);
     --shadow-color: #E8E8E8;
+
+    --primary-continue: rgba(6, 126, 62, 0.44);
+    --secondary-continue: #36a947;
+    --accent-continue: rgba(36, 126, 6, 0.1);
+
+    --primary-cancel: rgba(126, 6, 6, 0.44);
+    --secondary-cancel: #a93636;
+    --accent-cancel: rgba(126, 6, 6, 0.1);
 }
 
 button.primary {
@@ -41,6 +49,48 @@ button.primary {
     &:active {
         border: solid 1px var(--accent-color);
         color: var(--primary-color);
+    }
+}
+
+button.save {
+    padding: 10px;
+    margin-right: 5px;
+    border: solid 1px var(--primary-continue);
+    background: var(--primary-continue);
+    color: white;
+    border-radius: 8px;
+
+    &:hover {
+        cursor: pointer;
+        font-weight: bold;
+        background: var(--secondary-continue);
+        transform: scale(1.05);
+    }
+
+    &:active {
+        border: solid 1px var(--accent-continue);
+        color: var(--primary-continue);
+    }
+}
+
+button.cancel {
+    padding: 10px;
+    margin-right: 5px;
+    border: solid 1px var(--primary-cancel);
+    background: var(--primary-cancel);
+    color: white;
+    border-radius: 8px;
+
+    &:hover {
+        cursor: pointer;
+        font-weight: bold;
+        background: var(--secondary-cancel);
+        transform: scale(1.05);
+    }
+
+    &:active {
+        border: solid 1px var(--accent-cancel);
+        color: var(--primary-cancel);
     }
 }
 

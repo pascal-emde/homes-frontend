@@ -3,11 +3,18 @@
     display: grid;
     grid-column: 1;
     justify-content: center;
+    user-select: none;
 }
 
 .new-home-header {
     background-color: var(--accent-color);
     padding: 10px 10px 10px 10px;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .listing-apply .section-heading {
@@ -58,6 +65,7 @@ button {
 .buttons-vertical {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
 }
 
 
