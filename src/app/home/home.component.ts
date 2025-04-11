@@ -1,3 +1,4 @@
+import { URLS } from "../utils/global-settings";
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from "../housing-location/housing-location.component";
@@ -50,7 +51,7 @@ export class HomeComponent {
 
     callApi() {
         this.housingService.callApi().then((response) => {
-            console.log(`API call from backend: \n ${JSON.stringify(response)}`)
+            console.log(`API call from backend [${URLS.BACKEND}]: \n ${JSON.stringify(response)}`)
         });
     }
 

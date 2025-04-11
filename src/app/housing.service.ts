@@ -1,3 +1,5 @@
+//import { URL_HOME_LOCATIONS, URL_BACKEND } from "./utils/global-settings";
+import { URLS } from "./utils/global-settings";
 import { Injectable } from '@angular/core';
 import { HousingLocation } from "./housing-location/housing-location";
 import { WeatherObject } from "./utils/API Test/weather-object";
@@ -6,18 +8,15 @@ import { WeatherObject } from "./utils/API Test/weather-object";
   providedIn: 'root'
 })
 export class HousingService {
-  url = 'http://localhost:3000/locations';
-  urlBE = 'http://localhost:5288/api/homes';
-
   constructor() { }
 
   async getAllHousingLocations(): Promise<HousingLocation[]> {
-    const data = await fetch(this.url);
+    const data = await fetch(URLS.HOME_LOCATIONS);
     return await data.json() ?? [];
   }
 
   async getHousingLocationById(id: Number): Promise<HousingLocation | undefined> {
-    const data = await fetch(`${this.url}/${id}`);
+    const data = await fetch(`${URLS.HOME_LOCATIONS}/${id}`);
     return await data.json() ?? {};
   }
 
@@ -26,7 +25,7 @@ export class HousingService {
   }
 
   async callApi(): Promise<WeatherObject[]> {
-    const data = await fetch(this.urlBE);
+    const data = await fetch(URLS.BACKEND);
     return await data.json();
   }
 
@@ -46,7 +45,7 @@ export class HousingService {
         price: price
       };
 
-      //TODO Add Home to JSON-DB
+      //TODO Add Home to JSON-DB --> URL?
     console.log(JSON.stringify(newHome))
     });
   }
