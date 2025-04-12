@@ -1,4 +1,3 @@
-//import { URL_HOME_LOCATIONS, URL_BACKEND } from "./utils/global-settings";
 import { URLS } from "./utils/global-settings";
 import { Injectable } from '@angular/core';
 import { HousingLocation } from "./housing-location/housing-location";

@@ -75,8 +75,8 @@ export class NewHomeFormComponent {
     price: new FormControl('')
   });
 
-    cancelNewHome(): void {
-      this.dialogRef.close();
+  cancelNewHome(): void {
+    this.dialogRef.close();
   };
 
   saveNewHomeAndContinue() {
