@@ -7,6 +7,10 @@
 
   `git clone -b homes-app-start git@github.com:angular/codelabs.git homes-app`
 
+- Create Online Repo
+
+  `git remote add origin https://github.com/pascal-emde/homes-frontend.git`
+
 - Once the code has been downloaded
 
   `cd homes-app`
